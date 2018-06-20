@@ -12,7 +12,7 @@ Scenario: Inrichting wordt gevonden
 	Als de inrichting wordt opgevraagd voor een medewerker van 18 jaar
 	Dan wordt de waarde 3 gevonden
 
-Scenario: Inrichting wordt gevonden
+Scenario: Inrichting wordt niet gevonden
 
 	Stel het volgende is ingericht onder de naam "maximale arbeidstijd"
 	| Leeftijd | Waarde |
