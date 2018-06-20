@@ -9,7 +9,7 @@ Scenario: Inrichting wordt gevonden
 	| 16       | 1      |
 	| 17       | 2      |
 	| 18       | 3      |
-	Als de inrichting wordt opgevraagd voor een medewerker van 18 jaar
+	Als de inrichting van "maximale arbeidstijd" wordt opgevraagd voor een medewerker van 18 jaar
 	Dan wordt de waarde 3 gevonden
 
 Scenario: Inrichting wordt niet gevonden
@@ -19,5 +19,5 @@ Scenario: Inrichting wordt niet gevonden
 	| 16       | 1      |
 	| 17       | 2      |
 	| 18       | 3      |
-	Als de inrichting wordt opgevraagd voor een medewerker van 19 jaar
+	Als de inrichting van "maximale arbeidstijd" wordt opgevraagd voor een medewerker van 15 jaar
 	Dan wordt geen waarde gevonden
