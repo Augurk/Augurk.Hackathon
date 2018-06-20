@@ -1,11 +1,9 @@
 ﻿Functionaliteit: Controleer ATW
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	Om te voorkomen dat niet-wetende de arbeidstijdenwet overtreden wordt, wordt automatisch gecontroleerd of de geroosterde
+	uren passen binnen de geldende wettelijke limieten. 
 
-@mytag
-Scenario: Add two numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	When I press add
-	Then the result should be 120 on the screen
+Scenario: Benodigde ATW regels worden uitgevoerd
+
+	Als de ATW controle wordt uitgevoerd
+	Dan is de controle op "maximale arbeidstijd" uitgevoerd
+	En is de controle op "verplichte rustperiode" uitgevoerd
