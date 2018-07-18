@@ -40,9 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ATWManager.cs" />
+    <Compile Include="Dienst.cs" />
+    <Compile Include="IATWLog.cs" />
     <Compile Include="IInrichtingProvider.cs" />
     <Compile Include="InrichtingProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regels\IATWRegel.cs" />
+    <Compile Include="Regels\MaximaleArbeidstijdRegel.cs" />
+    <Compile Include="Regels\VerplichteRustperiodeRegel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

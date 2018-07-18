@@ -82,7 +82,9 @@
       <DependentUpon>Leeftijdsgebonden inrichting.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\ATWSteps.cs" />
     <Compile Include="Steps\InrichtingSteps.cs" />
+    <Compile Include="Support\ATWLogDriver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
