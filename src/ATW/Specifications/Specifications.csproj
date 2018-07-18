@@ -85,6 +85,7 @@
     <Compile Include="Steps\ATWSteps.cs" />
     <Compile Include="Steps\InrichtingSteps.cs" />
     <Compile Include="Steps\MaximaleArbeidstijdRegelSteps.cs" />
+    <Compile Include="Steps\VerplichteRustperiodeRegelSteps.cs" />
     <Compile Include="Support\ATWDriver.cs" />
     <Compile Include="Support\ATWLogDriver.cs" />
     <Compile Include="Support\Hooks.cs" />
