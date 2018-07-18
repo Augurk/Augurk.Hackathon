@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace Implementation
+namespace Augurk.Hackathon.Rooster
 {
     public class FilterConfig
     {

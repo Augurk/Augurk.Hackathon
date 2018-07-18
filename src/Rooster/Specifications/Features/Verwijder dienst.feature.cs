@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Specifications.Features
+namespace Augurk.Hackathon.Rooster.Specifications.Features
 {
     using TechTalk.SpecFlow;
     
@@ -61,7 +61,7 @@ namespace Specifications.Features
             if (((testRunner.FeatureContext != null) 
                         && (testRunner.FeatureContext.FeatureInfo.Title != "Verwijder dienst")))
             {
-                global::Specifications.Features.VerwijderDienstFeature.FeatureSetup(null);
+                global::Augurk.Hackathon.Rooster.Specifications.Features.VerwijderDienstFeature.FeatureSetup(null);
             }
         }
         

@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Specifications.Features
+namespace Augurk.Hackathon.Rooster.Specifications.Features
 {
     using TechTalk.SpecFlow;
     
@@ -44,7 +44,8 @@ namespace Specifications.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("nl-NL"), "Rooster Dienst In", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("nl-NL"), "Rooster Dienst In", "\tDiensten kunnen op een dag worden ingeroosterd, waarbij de ATW regels gevalideer" +
+                    "d worden.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -61,7 +62,7 @@ namespace Specifications.Features
             if (((testRunner.FeatureContext != null) 
                         && (testRunner.FeatureContext.FeatureInfo.Title != "Rooster Dienst In")))
             {
-                global::Specifications.Features.RoosterDienstInFeature.FeatureSetup(null);
+                global::Augurk.Hackathon.Rooster.Specifications.Features.RoosterDienstInFeature.FeatureSetup(null);
             }
         }
         
@@ -80,6 +81,110 @@ namespace Specifications.Features
         public virtual void ScenarioCleanup()
         {
             testRunner.CollectScenarioErrors();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Voeg een dienst toe die de ATW regels niet overtreed")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Rooster Dienst In")]
+        public virtual void VoegEenDienstToeDieDeATWRegelsNietOvertreed()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Voeg een dienst toe die de ATW regels niet overtreed", ((string[])(null)));
+#line 4
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Dag",
+                        "Start tijd",
+                        "Eind tijd"});
+            table1.AddRow(new string[] {
+                        "Maandag",
+                        "08:00",
+                        "12:00"});
+            table1.AddRow(new string[] {
+                        "Dinsdag",
+                        "12:00",
+                        "16:00"});
+#line 6
+ testRunner.Given("de volgende diensten zijn reeds ingeroosterd", ((string)(null)), table1, "Stel ");
+#line 10
+ testRunner.When("ik een dienst van 16:00 tot 20:00 inrooster op Woensdag", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Dag",
+                        "Start tijd",
+                        "Eind tijd"});
+            table2.AddRow(new string[] {
+                        "Maandag",
+                        "08:00",
+                        "12:00"});
+            table2.AddRow(new string[] {
+                        "Dinsdag",
+                        "12:00",
+                        "16:00"});
+            table2.AddRow(new string[] {
+                        "Woensdag",
+                        "16:00",
+                        "20:00"});
+#line 11
+ testRunner.Then("zijn de volgende diensten ingeroosterd", ((string)(null)), table2, "Dan ");
+#line 16
+ testRunner.And("er zijn geen ATW regels overtreden", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Voeg een dienst toe die de ATW regels overtreed")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Rooster Dienst In")]
+        public virtual void VoegEenDienstToeDieDeATWRegelsOvertreed()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Voeg een dienst toe die de ATW regels overtreed", ((string[])(null)));
+#line 18
+this.ScenarioSetup(scenarioInfo);
+#line 20
+ testRunner.Given("de medewerker is 16 jaar oud", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Stel ");
+#line 21
+ testRunner.And("de niet werkbare tijden voor iemand van 16 of 17 jaar zijn van 23:00 tot 06:00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Dag",
+                        "Start tijd",
+                        "Eind tijd"});
+            table3.AddRow(new string[] {
+                        "Maandag",
+                        "08:00",
+                        "12:00"});
+            table3.AddRow(new string[] {
+                        "Dinsdag",
+                        "12:00",
+                        "16:00"});
+#line 22
+ testRunner.And("de volgende diensten zijn reeds ingeroosterd", ((string)(null)), table3, "En ");
+#line 26
+ testRunner.When("ik een dienst van 05:00 tot 11:00 inrooster op Woensdag", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Dag",
+                        "Start tijd",
+                        "Eind tijd"});
+            table4.AddRow(new string[] {
+                        "Maandag",
+                        "08:00",
+                        "12:00"});
+            table4.AddRow(new string[] {
+                        "Dinsdag",
+                        "12:00",
+                        "16:00"});
+            table4.AddRow(new string[] {
+                        "Woensdag",
+                        "05:00",
+                        "11:00"});
+#line 27
+ testRunner.Then("zijn de volgende diensten ingeroosterd", ((string)(null)), table4, "Dan ");
+#line 32
+ testRunner.But("er zijn ATW regels overtreden", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Maar ");
+#line hidden
+            this.ScenarioCleanup();
         }
     }
 }

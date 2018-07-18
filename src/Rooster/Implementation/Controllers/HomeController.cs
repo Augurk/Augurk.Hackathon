@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Implementation.Controllers
+namespace Augurk.Hackathon.Rooster.Controllers
 {
     public class HomeController : Controller
     {
