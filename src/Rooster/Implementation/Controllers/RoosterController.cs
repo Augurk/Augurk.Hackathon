@@ -2,6 +2,7 @@
 using Augurk.Hackathon.Rooster.Models;
 using Augurk.Hackathon.Rooster.Repositories;
 using System;
+using System.Linq;
 using System.Web.Http;
 
 namespace Augurk.Hackathon.Rooster.Controllers
@@ -38,7 +39,14 @@ namespace Augurk.Hackathon.Rooster.Controllers
 
         public MedewerkerRooster Delete(Dienst dienst)
         {
-            throw new NotImplementedException();
+            var rooster = _repository.GetRooster();
+            var bestaandeDienst = rooster.Diensten.FirstOrDefault(d => d.StartTijd == dienst.StartTijd &&
+                                                                       d.Eindtijd == dienst.Eindtijd &&
+                                                                       d.DagVanDeWeek == dienst.DagVanDeWeek);
+            rooster.Diensten.Remove(bestaandeDienst);
+
+            _repository.OpslaanRooster(rooster);
+            return rooster;
         }
     }
 }

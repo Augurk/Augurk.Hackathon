@@ -52,6 +52,22 @@ namespace Augurk.Hackathon.Rooster.Specifications.Steps
             _controller.Post(dienst);
         }
 
+        [When(@"de dienst van (.*) tot (.*) op (.*) wordt verwijderd")]
+        public void AlsDeDienstOpDinsdagVanTotWordtVerwijderd(TimeSpan beginTijd, TimeSpan eindTijd, string dag)
+        {
+            var rooster = _controller.Get();
+            var dienst = rooster.Diensten.FirstOrDefault(d => d.StartTijd == beginTijd &&
+                                                              d.Eindtijd == eindTijd &&
+                                                              d.DagVanDeWeek == StepArgumentTransformations.DutchToEnglish(dag));
+
+            if (dienst == null)
+            {
+                throw new InvalidOperationException($"Er is geen dienst geroosterd van {beginTijd} tot {eindTijd} op {dag}");
+            }
+
+            _controller.Delete(dienst);
+        }
+
         [Then(@"zijn de volgende diensten ingeroosterd")]
         public void DanZijnDeVolgendeDienstenIngeroosterd(Table table)
         {

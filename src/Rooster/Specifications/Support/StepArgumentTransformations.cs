@@ -8,21 +8,21 @@ namespace Augurk.Hackathon.Rooster.Specifications.Support
     {
         public static DayOfWeek DutchToEnglish(string input)
         {
-            switch (input)
+            switch (input.ToLower())
             {
-                case "Maandag":
+                case "maandag":
                     return DayOfWeek.Monday;
-                case "Dinsdag":
+                case "dinsdag":
                     return DayOfWeek.Tuesday;
-                case "Woensdag":
+                case "woensdag":
                     return DayOfWeek.Wednesday;
-                case "Donderdag":
+                case "donderdag":
                     return DayOfWeek.Thursday;
-                case "Vrijdag":
+                case "vrijdag":
                     return DayOfWeek.Friday;
-                case "Zaterdag":
+                case "zaterdag":
                     return DayOfWeek.Saturday;
-                case "Zondag":
+                case "zondag":
                     return DayOfWeek.Sunday;
                 default:
                     throw new ArgumentException($"Onbekende dag '{input}'", nameof(input));

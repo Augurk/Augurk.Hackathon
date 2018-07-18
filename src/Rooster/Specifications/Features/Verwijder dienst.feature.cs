@@ -81,6 +81,46 @@ namespace Augurk.Hackathon.Rooster.Specifications.Features
         {
             testRunner.CollectScenarioErrors();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Eerder ingeroosterde dienst wordt verwijderd")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Verwijder dienst")]
+        public virtual void EerderIngeroosterdeDienstWordtVerwijderd()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Eerder ingeroosterde dienst wordt verwijderd", ((string[])(null)));
+#line 3
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Dag",
+                        "Start tijd",
+                        "Eind tijd"});
+            table1.AddRow(new string[] {
+                        "Maandag",
+                        "08:00",
+                        "12:00"});
+            table1.AddRow(new string[] {
+                        "Dinsdag",
+                        "12:00",
+                        "16:00"});
+#line 5
+ testRunner.Given("de volgende diensten zijn reeds ingeroosterd", ((string)(null)), table1, "Stel ");
+#line 9
+ testRunner.When("de dienst van 12:00 tot 16:00 op dinsdag wordt verwijderd", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Dag",
+                        "Start tijd",
+                        "Eind tijd"});
+            table2.AddRow(new string[] {
+                        "Maandag",
+                        "08:00",
+                        "12:00"});
+#line 10
+ testRunner.Then("zijn de volgende diensten ingeroosterd", ((string)(null)), table2, "Dan ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
