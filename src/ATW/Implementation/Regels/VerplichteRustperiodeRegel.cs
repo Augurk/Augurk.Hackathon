@@ -6,7 +6,7 @@ namespace Augurk.Hackathon.ATW.Regels
     {
         public const string NAME = "verplichte rustperiode";
 
-        public bool Valideer(IEnumerable<Dienst> diensten, IATWLog log)
+        public bool Valideer(int leeftijd, IInrichtingProvider inrichting, IEnumerable<Dienst> diensten, IATWLog log)
         {
             log.StartATWRegel(NAME);
             log.EndATWRegel(NAME);

@@ -24,7 +24,7 @@ Scenario: Maximale arbeidstijd per dag wordt niet overschreden
 Scenario: Meerdere inrichtingen voor verschillende leeftijden
 
 	Stel de medewerker is 16 jaar oud
-	En de maximaal toegestande arbeidstijd vanaf 18 jaar is 8 uur
+	En de maximaal toegestane arbeidstijd vanaf 18 jaar is 8 uur
 	Maar de maximaal toegestane arbeidstijd vanaf 16 jaar is 6 uur
 	En de medewerker heeft de volgende geroosterde uren
 	| Dag     | Start tijd | Eind tijd |

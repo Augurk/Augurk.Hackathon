@@ -4,6 +4,6 @@ namespace Augurk.Hackathon.ATW.Regels
 {
     public interface IATWRegel
     {
-        bool Valideer(IEnumerable<Dienst> diensten, IATWLog log);
+        bool Valideer(int leeftijd, IInrichtingProvider inrichting, IEnumerable<Dienst> diensten, IATWLog log);
     }
 }

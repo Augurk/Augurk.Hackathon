@@ -8,6 +8,7 @@ namespace Augurk.Hackathon.ATW.Specifications.Steps
     public class InrichtingSteps
     {
         private readonly IInrichtingProvider inrichtingProvider;
+        private readonly List<(int leeftijd, int maximaleArbeidstijd)> maximaleArbeidstijden = new List<(int leeftijd, int maximaleArbeidstijd)>();
         private int? retrievedWaarde;
 
         public InrichtingSteps(InrichtingProvider inrichtingProvider)
@@ -25,6 +26,13 @@ namespace Augurk.Hackathon.ATW.Specifications.Steps
             }
 
             this.inrichtingProvider.SetWaarden(inrichtingsNaam, waarden.ToArray());
+        }
+
+        [Given(@"de maximaal toegestane arbeidstijd vanaf (.*) jaar is (.*) uur")]
+        public void GegevenDeMaximaalToegestaneArbeidstijdVanafJaarIsUur(int leeftijd, int maximaleArbeidstijd)
+        {
+            maximaleArbeidstijden.Add((leeftijd, maximaleArbeidstijd));
+            this.inrichtingProvider.SetWaarden("MaximaleArbeidstijd", maximaleArbeidstijden.ToArray());
         }
 
         [When(@"de inrichting van ""(.*)"" wordt opgevraagd voor een medewerker van (.*) jaar")]

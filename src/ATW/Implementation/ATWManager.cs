@@ -5,13 +5,13 @@ namespace Augurk.Hackathon.ATW
 {
     public class ATWManager
     {
-        public bool ValideerATW(IEnumerable<Dienst> diensten, IATWLog log)
+        public bool ValideerATW(int leeftijd, IInrichtingProvider inrichting, IEnumerable<Dienst> diensten, IATWLog log)
         {
             IATWRegel maximaleArbeidstijdRegel = new MaximaleArbeidstijdRegel();
-            maximaleArbeidstijdRegel.Valideer(diensten, log);
+            maximaleArbeidstijdRegel.Valideer(leeftijd, inrichting, diensten, log);
 
             IATWRegel verplichteRustperiodeRegel = new VerplichteRustperiodeRegel();
-            verplichteRustperiodeRegel.Valideer(diensten, log);
+            verplichteRustperiodeRegel.Valideer(leeftijd, inrichting, diensten, log);
 
             return false;
         }
