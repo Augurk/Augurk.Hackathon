@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Augurk.CSharpAnalyzer.Annotations, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Augurk.CSharpAnalyzer.0.1.0-ci0081\lib\netstandard20\Augurk.CSharpAnalyzer.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="Augurk.Hackathon.ATW">
       <HintPath>..\..\ATW\Implementation\bin\$(Configuration)\Augurk.Hackathon.ATW.dll</HintPath>
     </Reference>

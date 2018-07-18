@@ -331,3 +331,6 @@ ASALocalRun/
 
 # SpecFlow generated files
 *.feature.cs
+
+# Augurk.CSharpAnalyzer generated files
+*.aar
