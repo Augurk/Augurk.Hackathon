@@ -7,7 +7,7 @@ Augurk is een living documentation systeem dat gebruikt kan worden in combinatie
 Doormiddel van deze hackathon willen we Augurk nog meer waarde laten toevoegen, door niet alleen de documentatie makkelijk beschikbaar te maken, maar ook de onderlinge verbanden tussen features inzichtelijk te maken. Hiervoor is reeds een statische analyse tool ontwikkelt om aan de hand van code de onderlinge verbanden te vinden. De volgende stap is om dat ook visueel te maken, zodat gebruikers van Augurk bijvoorbeeld kunnen inzien welke andere features van het systeem gebruik maken van een bepaalde feature, of andersom welke andere features een bepaalde feature gebruikt.
 
 ## Voorbeeld project
-Het voorbeeld project bestaat uit twee losse Visual Studio solutions, die een onderlinge afhankelijkheid van elkaar hebben. Deze solutions beschreven respectievelijk een implementatie van de Arbeidstijdenwet (ATW) en een Rooster module die gebruik maakt ATW om te controleren of geroosterde diensten wel passen binnen die wet.
+Het voorbeeld project bestaat uit twee losse Visual Studio solutions, die een onderlinge afhankelijkheid van elkaar hebben. Deze solutions beschrijven respectievelijk een implementatie van de Arbeidstijdenwet (ATW) en een Rooster module die gebruik maakt van de ATW om te controleren of geroosterde diensten wel passen binnen die wet.
 
 Voor het ATW gedeelte zijn de volgende features geschreven en geïmplementeerd:
 - Controleer ATW
@@ -25,15 +25,16 @@ De rooster functionaliteit bestaat uit slechts twee features, die beiden gebruik
 Om enige data te krijgen om te visualiseren, volg de volgende stappen:
 
 1. Clone de **Augurk** repository: git clone https://github.com/augurk/Augurk
-2. Open **Augurk.sln** in Visual Studio en zorg er voor dat de solution **bouwt**
-3. Start Augurk zonder debuggen zodat de webserver draait
+2. Doe een checkout van de de **feature/dependency-analyzer** branch
+3. Open **Augurk.sln** in Visual Studio en zorg er voor dat de solution **bouwt**
+4. Start Augurk zonder debuggen zodat de webserver draait
 
-4. Clone de **Augurk.Hackathon** repository: git clone https://github.com/augurk/Augurk.Hackathon
-5. Open **ATW.sln** in een nieuwe instantie van Visual Studio (sluit niet Augurk, want dan stopt de webserver)
-6. Zorg er voor dat de solution **bouwt**
-7. Gebruik **publish.cmd** <url-naar-augurk> om de feature files te publiceren naar Augurk.
-8. Gebruik **analyze.cmd** <url-naar-augurk> om de analyze uit te voeren en de resultaten te uploaden naar Augurk.
-9. Vraag de data op via <url-naar-augurk>/api/v2/dependencies
+5. Clone de **Augurk.Hackathon** repository: git clone https://github.com/augurk/Augurk.Hackathon
+6. Open **ATW.sln** in een nieuwe instantie van Visual Studio (sluit niet Augurk, want dan stopt de webserver)
+7. Zorg er voor dat de solution **bouwt**
+8. Gebruik **publish.cmd** <url-naar-augurk> om de feature files te publiceren naar Augurk.
+9. Gebruik **analyze.cmd** <url-naar-augurk> om de analyze uit te voeren en de resultaten te uploaden naar Augurk.
+10. Vraag de data op via <url-naar-augurk>/api/v2/dependencies
 
 De data zou vergelijkbaar moeten zijn met de volgende output:
 
