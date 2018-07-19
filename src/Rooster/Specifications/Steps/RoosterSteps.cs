@@ -39,6 +39,14 @@ namespace Augurk.Hackathon.Rooster.Specifications.Steps
             _repository.OpslaanRooster(rooster);
         }
 
+        [Given(@"de ATW regels zijn overtreden")]
+        public void GegevenDeATWRegelsZijnOvertreden()
+        {
+            var rooster = _repository.GetRooster();
+            rooster.ATWOvertreden = true;
+            _repository.OpslaanRooster(rooster);
+        }
+
         [When(@"ik een dienst van (.*) tot (.*) inrooster op (.*)")]
         public void AlsIkEenDienstVanTotInroosterOpWoensdag(TimeSpan beginTijd, TimeSpan eindTijd, string dag)
         {

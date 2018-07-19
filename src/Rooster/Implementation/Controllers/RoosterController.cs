@@ -45,6 +45,9 @@ namespace Augurk.Hackathon.Rooster.Controllers
                                                                        d.DagVanDeWeek == dienst.DagVanDeWeek);
             rooster.Diensten.Remove(bestaandeDienst);
 
+            ATWManager manager = new ATWManager();
+            rooster.ATWOvertreden = !manager.ValideerATW(rooster.Leeftijd, _inrichtingProvider, rooster.Diensten, _log);
+
             _repository.OpslaanRooster(rooster);
             return rooster;
         }

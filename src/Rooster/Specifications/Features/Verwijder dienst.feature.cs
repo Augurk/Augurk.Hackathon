@@ -44,7 +44,7 @@ namespace Augurk.Hackathon.Rooster.Specifications.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("nl-NL"), "Verwijder dienst", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("nl-NL"), "Verwijder dienst", "Diensten kunnen verwijderd worden, wat tevens een ATW controle tot gevolg heeft.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -88,7 +88,7 @@ namespace Augurk.Hackathon.Rooster.Specifications.Features
         public virtual void EerderIngeroosterdeDienstWordtVerwijderd()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Eerder ingeroosterde dienst wordt verwijderd", ((string[])(null)));
-#line 3
+#line 4
 this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
@@ -103,9 +103,11 @@ this.ScenarioSetup(scenarioInfo);
                         "Dinsdag",
                         "12:00",
                         "16:00"});
-#line 5
+#line 6
  testRunner.Given("de volgende diensten zijn reeds ingeroosterd", ((string)(null)), table1, "Stel ");
-#line 9
+#line 10
+ testRunner.And("de ATW regels zijn overtreden", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
+#line 11
  testRunner.When("de dienst van 12:00 tot 16:00 op dinsdag wordt verwijderd", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -116,8 +118,10 @@ this.ScenarioSetup(scenarioInfo);
                         "Maandag",
                         "08:00",
                         "12:00"});
-#line 10
+#line 12
  testRunner.Then("zijn de volgende diensten ingeroosterd", ((string)(null)), table2, "Dan ");
+#line 15
+ testRunner.And("er zijn geen ATW regels overtreden", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
 #line hidden
             this.ScenarioCleanup();
         }
