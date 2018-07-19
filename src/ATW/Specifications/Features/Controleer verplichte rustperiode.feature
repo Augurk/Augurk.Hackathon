@@ -1,5 +1,5 @@
 ﻿Functionaliteit: Controleer verplichte rustperiode
-	Voor 16 en 17 jarige medewerkers geldt dat er een verplichte rustperiode is tussen diensten. Deze ATW regel controleert of hieraan wordt voldaan.
+Voor 16 en 17 jarige medewerkers geldt dat er een verplichte rustperiode is tussen diensten. Deze ATW regel controleert of hieraan wordt voldaan.
 
 Scenario: Verplichte rustperiode wordt overschreden
 

@@ -44,8 +44,8 @@ namespace Augurk.Hackathon.Rooster.Specifications.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("nl-NL"), "Rooster Dienst In", "\tDiensten kunnen op een dag worden ingeroosterd, waarbij de ATW regels gevalideer" +
-                    "d worden.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("nl-NL"), "Rooster Dienst In", "Diensten kunnen op een dag worden ingeroosterd, waarbij de ATW regels gevalideerd" +
+                    " worden.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

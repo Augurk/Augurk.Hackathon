@@ -1,5 +1,5 @@
 ﻿Functionaliteit: Rooster Dienst In
-	Diensten kunnen op een dag worden ingeroosterd, waarbij de ATW regels gevalideerd worden.
+Diensten kunnen op een dag worden ingeroosterd, waarbij de ATW regels gevalideerd worden.
 	
 Scenario: Voeg een dienst toe die de ATW regels niet overtreed
 

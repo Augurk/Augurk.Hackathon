@@ -1,6 +1,6 @@
 ﻿Functionaliteit: Leeftijdsgebonden inrichting
-	Omdat de ATW veelal afwijkt per leeftijd is het noodzakelijk om eenvoudig de juiste inrichting voor een bepaalde leeftijd te kunnen bepalen,
-	Deze feature omschrijft hoe dit werkt.
+Omdat de ATW veelal afwijkt per leeftijd is het noodzakelijk om eenvoudig de juiste inrichting voor een bepaalde leeftijd te kunnen bepalen,
+Deze feature omschrijft hoe dit werkt.
 
 Scenario: Inrichting wordt gevonden
 
