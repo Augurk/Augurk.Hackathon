@@ -1,5 +1,5 @@
 ﻿Functionaliteit: Controleer maximale arbeidstijd per dag
-	Op basis van leeftijd mogen medewerkers niet langer dan x uur per dag werken. Deze ATW regel controleert of hieraan wordt voldaan.
+Op basis van leeftijd mogen medewerkers niet langer dan x uur per dag werken. Deze ATW regel controleert of hieraan wordt voldaan.
 
 Scenario: Maximale arbeidstijd per dag wordt overschreden
 
